@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Hapo31.IkaNama4NCV.IkaNamaView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Hapo31.IkaNama4NCV"
+             mc:Ignorable="d" 
+           
+             d:DesignHeight="308.027" d:DesignWidth="463.545">
+    <Grid Margin="2,2,2,2">
+        <Button x:Name="ConnectButton" VerticalAlignment="Top"
+                Command="{Binding Path=ButtonClickCommand}"
+                Content="{Binding ConnectionButtonText }" 
+                IsEnabled="{Binding ConnectionButtonEnabled }" Height="30" />
+        <ScrollViewer Margin="0,35,0,10" Name="textBoxScrollViewer">
+            <TextBox x:Name="logTextBox1" TextWrapping="Wrap" 
+                     Text="{Binding LogText}"
+                     IsEnabled="{Binding LogTextEnabled}" TextChanged="logTextBox1_TextChanged"
+                     IsReadOnly="True"/>
+        </ScrollViewer>
+    </Grid>
+
+</UserControl>
