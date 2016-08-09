@@ -52,7 +52,7 @@ namespace Hapo31.IkaLogProxy.Utils
             {"promodeler_rg", "プロモデラーRG"},
 
             {"hokusai", "ホクサイ"},
-            {"hokusai_hue", "ホクサイ"},
+            {"hokusai_hue", "ホクサイ・ヒュー"},
 
             {"bold", "ボールドマーカー"},
             {"bold_neo", "ボールドマーカーネオ"},
