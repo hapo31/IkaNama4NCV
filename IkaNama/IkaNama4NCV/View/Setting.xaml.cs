@@ -25,5 +25,10 @@ namespace Hapo31.IkaNama4NCV.View
 		{
 			InitializeComponent();
 		}
-	}
+
+        private void ListBoxItem_Selected(object sender, RoutedEventArgs e)
+        {
+            EventsList.SelectedIndex = -1;
+        }
+    }
 }

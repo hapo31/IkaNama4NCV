@@ -260,7 +260,9 @@ namespace Hapo31.IkaNama4NCV.ViewModel
                     ////メッセージを受信した時
                     ikanama.WebSocket.MessageReceived += (s, m) =>
                     {
+#if DEBUG
                         AppendLogText(m.Message);
+#endif
                     };
 
                     //エラーが発生した時

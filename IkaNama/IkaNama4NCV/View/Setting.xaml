@@ -10,21 +10,27 @@
         <Border Margin="0,0,373,10" BorderThickness="1">
 
             <TreeView x:Name="treeView" Margin="0,0,9,19">
-                <TreeViewItem Header="設定" IsExpanded="True" Height="408" Width="176" FontSize="12" HorizontalAlignment="Left">
+                <TreeViewItem Header="設定" IsExpanded="True" Width="176" FontSize="12" HorizontalAlignment="Left">
                     <TreeViewItem Header="イベント" IsExpanded="True" Margin="0,0,-379,0" >
-                        <ListBox Width="496" BorderThickness="0" Name="EventsList" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" HorizontalAlignment="Stretch" ItemsSource="{Binding ItemList}">
+                        <ListBox Width="496" BorderThickness="0" x:Name="EventsList" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" HorizontalAlignment="Stretch" ItemsSource="{Binding ItemList}">
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal">
                                         <ListBoxItem HorizontalAlignment="Right">
-                                            <CheckBox IsChecked="{Binding Path=Value.IsEnabled, Mode=TwoWay}"/>
+                                            <CheckBox IsChecked="{Binding Value.IsEnabled, Mode=TwoWay}"/>
                                         </ListBoxItem>
-                                        <TextBlock Text="{Binding Path=Key, Mode=OneWay}"/>
+                                        <TextBlock Text="{Binding Key, Mode=OneWay}"/>
                                     </StackPanel>
                                 </DataTemplate>
                             </ListBox.ItemTemplate>
                         </ListBox>
                     </TreeViewItem>
+                </TreeViewItem>
+                <TreeViewItem Header="ライセンス" IsExpanded="False" Height="408" Width="176" FontSize="12" HorizontalAlignment="Left">
+                    <ListBox SelectedItem="{Binding License}" BorderBrush="White">
+                        <ListBoxItem Content="DynamicJson"  Selected="ListBoxItem_Selected" BorderBrush="White"/>
+                        <ListBoxItem Content="WebSocket4Net"  Selected="ListBoxItem_Selected" BorderBrush="White" />
+                    </ListBox>
                 </TreeViewItem>
             </TreeView>
         </Border>

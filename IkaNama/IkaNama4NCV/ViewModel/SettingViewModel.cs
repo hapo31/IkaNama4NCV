@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Windows.Input;
 using System.Windows;
 using Hapo31.IkaNama.Utils;
+using System.Windows.Controls;
 
 //設定画面のViewModel
 namespace Hapo31.IkaNama4NCV.ViewModel
@@ -53,7 +54,7 @@ namespace Hapo31.IkaNama4NCV.ViewModel
 			set
 			{
 				source_text = value;
-				if(source_text != null)
+				if(VisibleDetail == Visibility.Visible && source_text != null)
 				{
 					ItemList[SelectedItem.Key].PostSource = source_text;
 				}
@@ -87,6 +88,32 @@ namespace Hapo31.IkaNama4NCV.ViewModel
 				OnPropertyChanged("SelectedItem");
 			}
 		}
+
+        private ListBoxItem license;
+        public ListBoxItem License
+        {
+            get { return license; }
+            set
+            {
+                SourceTextEnable = false;
+                license = value;
+                switch(value.Content as string)
+                {
+                    case "DynamicJson":
+                        Discription = @"Microsoft Public License (Ms-PL)";
+                        SourceText = @"DynamicJsonは©Microsoftが著作権、特許権、商標を擁します。";
+                        break;
+                    case "WebSocket4Net":
+                        Discription = @"Apache License 2.0 (Apache)";
+                        SourceText = @"Apache License
+Version 2.0, January 2004
+http://www.apache.org/licenses/";
+                        break;
+                }
+                VisibleDetail = Visibility.Visible;
+                OnPropertyChanged("License");
+            }
+        }
 
 		private System.Windows.Visibility visible_detail;
 		public System.Windows.Visibility VisibleDetail
