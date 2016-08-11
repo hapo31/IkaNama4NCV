@@ -36,10 +36,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="NicoLibrary">
-      <HintPath>F:\Tools\ニコ生\ncv_0151\NicoLibrary.dll</HintPath>
+      <HintPath>..\..\NicoLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Plugin">
-      <HintPath>F:\Tools\ニコ生\ncv_0151\Plugin.dll</HintPath>
+      <HintPath>..\..\Plugin.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
