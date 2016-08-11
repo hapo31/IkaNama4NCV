@@ -22,6 +22,8 @@ namespace Hapo31.IkaNama4NCV.ViewModel
 		}
 		#endregion
 
+        private bool isSelectedLisenceItem = false;
+
 		private string config_filename;
 		private ConfigData config_data;
 
@@ -54,14 +56,14 @@ namespace Hapo31.IkaNama4NCV.ViewModel
 			set
 			{
 				source_text = value;
-				if(VisibleDetail == Visibility.Visible && source_text != null)
+				if(!isSelectedLisenceItem && source_text != null)
 				{
 					ItemList[SelectedItem.Key].PostSource = source_text;
 				}
 				OnPropertyChanged("SourceText");
 			}
 		}
-
+        
 		private Dictionary<string, SceneData> item_list;
 		public Dictionary<string, SceneData> ItemList
 		{
@@ -79,6 +81,7 @@ namespace Hapo31.IkaNama4NCV.ViewModel
 			get { return selected_item; }
 			set
 			{
+                isSelectedLisenceItem = false;
 				selected_item = value;
 				Discription = selected_item.Value.Discription;
 				SourceText = selected_item.Value.PostSource;
@@ -95,6 +98,7 @@ namespace Hapo31.IkaNama4NCV.ViewModel
             get { return license; }
             set
             {
+                isSelectedLisenceItem = true;
                 SourceTextEnable = false;
                 license = value;
                 switch(value.Content as string)

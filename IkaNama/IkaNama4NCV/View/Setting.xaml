@@ -26,10 +26,10 @@
                         </ListBox>
                     </TreeViewItem>
                 </TreeViewItem>
-                <TreeViewItem Header="ライセンス" IsExpanded="False" Height="408" Width="176" FontSize="12" HorizontalAlignment="Left">
+                <TreeViewItem Header="ライセンス表記" IsExpanded="False" Height="408" Width="176" FontSize="12" HorizontalAlignment="Left">
                     <ListBox SelectedItem="{Binding License}" BorderBrush="White">
-                        <ListBoxItem Content="DynamicJson"  Selected="ListBoxItem_Selected" BorderBrush="White"/>
-                        <ListBoxItem Content="WebSocket4Net"  Selected="ListBoxItem_Selected" BorderBrush="White" />
+                        <ListBoxItem Content="DynamicJson" BorderBrush="White"/>
+                        <ListBoxItem Content="WebSocket4Net" BorderBrush="White" />
                     </ListBox>
                 </TreeViewItem>
             </TreeView>
