@@ -7,7 +7,7 @@ IkaLogのWebSocketServerを利用してデータを取得しています。
 NCVを通して、IkaLogのイベントの発生に合わせてニコ生に投稿者コメントを投稿する事ができます。  
 (イベントの例：イカを倒した、何かに倒された、ゲームの結果、など)  
 # 使い方は？  
-こちら(Comming soon...)からファイルをダウンロードし、NCVのpluginsフォルダに中身を全て配置してください。  
+[こちら](https://1drv.ms/f/s!ArszZoNlnu1qgc5teO57jodGWIYj-g)からファイルをダウンロードし、NCVのpluginsフォルダに中身を全て配置してください。  
 NCVを起動して、プラグインメニューにIkanama4NCVが出現すれば導入は成功です。  
 #### 1. NCVメニューのプラグイン->Ikanama4NCVをクリックしてウインドウを開きます。  
 #### 2. IkaLogを立ち上げ、WebSocketServerを有効にします。(IkaLog側の設定ウインドウから探してください。CUI版使ってる人は言われなくても頑張ってください。)

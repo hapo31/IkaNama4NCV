@@ -39,8 +39,8 @@ namespace Hapo31.IkaNama4NCV.ViewModel
 			public const string DisConnectedButton = "未接続";
 			public const string ConnectedLog = "IkaLogへ接続しました";
 			public const string DisconnectedLog = "IkaLogから切断されました...";
-			public const string LoadedConfigfileLog = "設定ファイルを読み込みました。";
-			public const string CreatedDefalutConfigLog = "設定ファイルが読み込めなかったため、デフォルトの設定を適用します。";
+			public const string LoadedConfigfileLog = "設定ファイルを読み込みました";
+			public const string CreatedDefalutConfigLog = "設定ファイルが読み込めなかったため、デフォルトの設定を適用します";
 		}
 
 		/// <summary>
